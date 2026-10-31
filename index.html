@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+ <head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+   <title>Student Admission Form</title>
+
+
+   <link rel="stylesheet" href="style.css" />
+ </head>
+
+
+ <body>
+   <div class="container">
+     <h1>Student Admission Form</h1>
+
+
+     <form id="admissionForm">
+       <!-- Name -->
+       <div class="form-group">
+         <label for="name"> Full Name </label>
+
+
+         <input type="text" id="name" name="name" required placeholder="Enter your full name" />
+
+
+         <small id="nameError"></small>
+       </div>
+
+
+       <!-- Email -->
+       <div class="form-group">
+         <label for="email"> Email </label>
+
+
+         <input type="email" id="email" placeholder="Enter your email" />
+
+
+         <small id="emailError"></small>
+       </div>
+
+
+       <!-- Password -->
+       <div class="form-group">
+         <label for="password"> Admission Password </label>
+
+
+         <input
+           type="password"
+           id="password"
+           placeholder="Create a password"
+         />
+
+
+         <small id="passwordError"></small>
+       </div>
+
+
+       <!-- Age -->
+       <div class="form-group">
+         <label for="age"> Age </label>
+
+
+         <input
+           type="number"
+           id="age"
+           placeholder="Enter your age"
+           min="15"
+           max="60"
+         />
+
+
+         <small id="ageError"></small>
+       </div>
+
+
+       <!-- Date of Birth -->
+       <div class="form-group">
+         <label for="dob"> Date of Birth </label>
+
+
+         <input type="date" id="dob" />
+
+
+         <small id="dobError"></small>
+       </div>
+
+
+       <!-- Preferred Interview Time -->
+       <div class="form-group">
+         <label for="time"> Preferred Interview Time </label>
+
+
+         <input type="time" id="time" />
+
+
+         <small id="timeError"></small>
+       </div>
+
+
+       <!-- Gender -->
+       <div class="form-group">
+         <label> Gender </label>
+
+
+         <div class="radio-group">
+           <label>
+             <input type="radio" name="gender" value="Male" />
+             Male
+           </label>
+
+
+           <label>
+             <input type="radio" name="gender" value="Female" />
+             Female
+           </label>
+
+
+           <label>
+             <input type="radio" name="gender" value="Other" />
+             Other
+           </label>
+         </div>
+
+
+         <small id="genderError"></small>
+       </div>
+
+
+       <!-- Course -->
+       <div class="form-group">
+         <label for="course"> Select Course </label>
+
+
+         <select id="course">
+           <option value="">Select a course</option>
+
+
+           <option value="B.Tech CSE">B.Tech CSE</option>
+
+
+           <option value="BCA">BCA</option>
+
+
+           <option value="MCA">MCA</option>
+
+
+           <option value="BBA">BBA</option>
+         </select>
+
+
+         <small id="courseError"></small>
+       </div>
+
+
+       <!-- Address -->
+       <div class="form-group">
+         <label for="address"> Address </label>
+
+
+         <textarea
+           id="address"
+           placeholder="Enter your complete address"
+         ></textarea>
+
+
+         <small id="addressError"></small>
+       </div>
+
+
+       <!-- Skills -->
+       <div class="form-group">
+         <label> Skills </label>
+
+
+         <div class="checkbox-group">
+           <label>
+             <input type="checkbox" name="skills" value="HTML" />
+             HTML
+           </label>
+
+
+           <label>
+             <input type="checkbox" name="skills" value="CSS" />
+             CSS
+           </label>
+
+
+           <label>
+             <input type="checkbox" name="skills" value="JavaScript" />
+             JavaScript
+           </label>
+
+
+           <label>
+             <input type="checkbox" name="skills" value="React" />
+             React
+           </label>
+         </div>
+
+
+         <small id="skillsError"></small>
+       </div>
+
+
+       <!-- File Upload -->
+       <div class="form-group">
+         <label> Upload Student Photo </label>
+
+
+         <!-- Hidden File Input -->
+
+
+         <input type="file" id="photo" accept="image/*" hidden />
+
+
+         <!-- Custom Button -->
+
+
+         <button type="button" id="uploadBtn" class="upload-btn">
+           Choose Photo
+         </button>
+
+
+         <!-- Selected File Name -->
+
+
+         <p id="fileName">No file selected</p>
+
+
+         <small id="photoError"></small>
+       </div>
+
+
+       <!-- Terms -->
+       <div class="form-group">
+         <label class="terms">
+           <input type="checkbox" id="terms" />
+
+
+           I agree to the terms and conditions.
+         </label>
+
+
+         <small id="termsError"></small>
+       </div>
+
+
+       <button type="submit" class="submit-btn">Submit Application</button>
+     </form>
+
+
+     <!-- Student Cards -->
+
+
+     <h2 class="students-heading">Submitted Applications</h2>
+
+
+<div id="studentContainer">
+
+
+   <!-- <div class="student-card">
+
+
+       <img
+           class="student-photo"
+           src="student-image.jpg"
+           alt="Rahul's photo"
+       >
+
+
+       <h3>Rahul Sharma</h3>
+
+
+       <p>
+           <strong>Email:</strong> rahul@gmail.com
+       </p>
+
+
+       <p>
+           <strong>Age:</strong> 22
+       </p>
+
+
+       <p>
+           <strong>DOB:</strong> 15-08-2004
+       </p>
+
+
+       <p>
+           <strong>Interview Time:</strong> 10:30 AM
+       </p>
+
+
+       <p>
+           <strong>Gender:</strong> Male
+       </p>
+
+
+       <p>
+           <strong>Course:</strong> Full Stack Development
+       </p>
+
+
+       <p>
+           <strong>Address:</strong> Agra, Uttar Pradesh
+       </p>
+
+
+       <strong>Skills:</strong>
+
+
+       <div class="skills">
+
+
+           <span class="skill">HTML</span>
+           <span class="skill">CSS</span>
+           <span class="skill">JavaScript</span>
+           <span class="skill">React</span>
+
+
+       </div>
+
+
+   </div> -->
+
+
+</div>
+
+
+ </div>
+
+
+   <script src="script.js"></script>
+ </body>
+</html>
+
+
+

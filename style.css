@@ -1,0 +1,268 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+
+body {
+   background: #f3f4f6;
+   padding: 40px 20px;
+}
+
+
+.container {
+   max-width: 850px;
+   margin: auto;
+}
+
+
+
+
+/* ---------------- FORM ---------------- */
+
+
+form {
+   background: white;
+   padding: 30px;
+   border-radius: 12px;
+
+
+   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+h1 {
+   text-align: center;
+   margin-bottom: 25px;
+}
+
+
+.form-group {
+   margin-bottom: 20px;
+}
+
+
+.form-group > label {
+   display: block;
+   margin-bottom: 7px;
+   font-weight: bold;
+}
+
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+select,
+textarea {
+   width: 100%;
+   padding: 12px;
+
+
+   border: 1px solid #ccc;
+   border-radius: 6px;
+
+
+   font-size: 15px;
+}
+
+
+textarea {
+   min-height: 100px;
+   resize: vertical;
+}
+
+
+
+
+/* ---------------- RADIO ---------------- */
+
+
+.radio-group,
+.checkbox-group {
+   display: flex;
+   gap: 20px;
+   flex-wrap: wrap;
+}
+
+
+.radio-group label,
+.checkbox-group label {
+   font-weight: normal;
+}
+
+
+
+
+/* ---------------- FILE ---------------- */
+
+
+.upload-btn {
+   padding: 11px 18px;
+
+
+   border: none;
+   border-radius: 6px;
+
+
+   background: #2563eb;
+   color: white;
+
+
+   cursor: pointer;
+}
+
+
+.upload-btn:hover {
+   background: #1d4ed8;
+}
+
+
+#fileName {
+   margin-top: 8px;
+   color: #555;
+   font-size: 14px;
+}
+
+
+
+
+/* ---------------- ERROR ---------------- */
+
+
+small {
+   display: block;
+   margin-top: 5px;
+   color: crimson;
+   min-height: 16px;
+}
+
+
+
+
+/* ---------------- BUTTON ---------------- */
+
+
+.submit-btn {
+   width: 100%;
+
+
+   padding: 13px;
+
+
+   border: none;
+   border-radius: 7px;
+
+
+   background: #16a34a;
+   color: white;
+
+
+   font-size: 16px;
+   cursor: pointer;
+}
+
+
+.submit-btn:hover {
+   background: #15803d;
+}
+
+
+
+
+/* ---------------- CARDS ---------------- */
+
+
+.students-heading {
+   margin: 40px 0 20px;
+}
+
+
+#studentContainer {
+   display: grid;
+
+
+   grid-template-columns:
+       repeat(auto-fit, minmax(280px, 1fr));
+
+
+   gap: 20px;
+}
+
+
+.student-card {
+   background: white;
+
+
+   padding: 20px;
+
+
+   border-radius: 10px;
+
+
+   box-shadow:
+       0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+.student-card h3 {
+   margin-bottom: 12px;
+}
+
+
+.student-card p {
+   margin: 7px 0;
+}
+
+
+.student-card strong {
+   color: #333;
+}
+
+
+.student-photo {
+   width: 100px;
+   height: 100px;
+
+
+   object-fit: cover;
+
+
+   border-radius: 50%;
+
+
+   display: block;
+
+
+   margin: 0 auto 15px;
+}
+
+
+.skills {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 6px;
+
+
+   margin-top: 8px;
+}
+
+
+.skill {
+   background: #e0e7ff;
+   color: #3730a3;
+
+
+   padding: 5px 8px;
+
+
+   border-radius: 5px;
+
+
+   font-size: 13px;
+}
+
